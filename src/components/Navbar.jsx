@@ -5,7 +5,7 @@ export default function Navbar({ hc, ac, pc, cc }) {
   return (
     <>
       <div className="flex justify-around items-center bg-black text-white p-4 py-5">
-        <h1 className="text-3xl font-bold">YARANAIKA</h1>
+        <h1 className="text-3xl font-bold">bankneedtosleep</h1>
         <Link style={hc} to="/">Home</Link>
         <Link style={ac} to="/about">About</Link>
         <Link style={pc} to="/portfolio">Portfolio</Link>

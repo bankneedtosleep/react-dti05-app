@@ -19,42 +19,39 @@ export default function Home() {
     <>
       <Navbar hc={hc} />
 
-      <div className="flex items-center justify-center mt-20">
-        <div className="text-white mr-20">
-          <h1 style={{ fontFamily: "Lora" }} className="text-3xl">
+      <div className="flex flex-col lg:flex-row items-center justify-center mt-16 lg:mt-20 gap-8 lg:gap-16 px-4">
+        <div className="text-white text-center lg:text-left max-w-xl">
+          <h1 style={{ fontFamily: "Lora" }} className="text-3xl lg:text-4xl font-semibold">
             Frontend Web
           </h1>
-          <h1 style={{ fontFamily: "Lora" }} className="text-3xl">
+          <h1 style={{ fontFamily: "Lora" }} className="text-3xl lg:text-4xl font-semibold">
             Developer
           </h1>
-          <br />
-          <span>
-            Hi, I'm Marc. <br />
-          </span>
-          <br />
-          <span>Web developer based in the Thailand</span>
-          <br />
-          <div className="flex mt-5">
-            <FaInstagramSquare className="mr-2 text-4xl bg-white text-black p-2 rounded-xl" />
-            <GrGithub className="ml-2 text-4xl" />
+          <p className="mt-4 text-lg lg:text-xl">
+            Hi, I'm Bank. <br />
+            Web developer based in Thailand
+          </p>
+          <div className="flex items-center justify-center lg:justify-start gap-4 mt-6">
+            <FaInstagramSquare className="text-3xl lg:text-4xl bg-white text-black p-2 rounded-xl" />
+            <GrGithub className="text-3xl lg:text-4xl" />
           </div>
         </div>
-        <div className="ml-20">
-          <img className="w-48 rounded-full" src={profile} alt="profile" />
+        <div className="flex-shrink-0">
+          <img className="w-36 h-36 sm:w-44 sm:h-44 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-white" src={profile} alt="profile" />
         </div>
       </div>
       <div className="flex flex-col items-center mt-12">
         <h2 className="text-white text-2xl font-bold mb-6">My Tech Stack</h2>
-        <div className="flex flex-wrap justify-center">
-          <img className="w-8 mx-2" src={img1} alt="figma" />
-          <img className="w-8 mx-2" src={img2} alt="java" />
-          <img className="w-8 mx-2" src={img3} alt="firebase" />
-          <img className="w-8 mx-2" src={img4} alt="js" />
-          <img className="w-8 mx-2" src={img5} alt="springboot" />
-          <img className="w-8 mx-2" src={img6} alt="css" />
-          <img className="w-8 mx-2" src={img7} alt="html" />
-          <img className="w-8 mx-2" src={img8} alt="node" />
-          <img className="w-8 mx-2" src={img9} alt="react" />
+        <div className="flex flex-wrap justify-center items-center gap-4 px-2">
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img1} alt="figma" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img2} alt="java" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img3} alt="firebase" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img4} alt="js" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img5} alt="springboot" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img6} alt="css" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img7} alt="html" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img8} alt="node" />
+          <img className="w-10 h-10 sm:w-12 sm:h-12 mx-2" src={img9} alt="react" />
         </div>
       </div>
     </>
