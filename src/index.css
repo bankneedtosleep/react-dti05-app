@@ -57,8 +57,6 @@ body{
 
 .blob-img { animation: spin 10s linear infinite; opacity: 0.95; }
 @keyframes spin { 0% { transform: rotate(0deg) } 100% { transform: rotate(360deg) } }
-
-/* Portfolio card styles */
 .card {
   border-radius: 1rem; /* rounded-2xl */
   overflow: hidden;

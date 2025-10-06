@@ -11,12 +11,10 @@ export default function Contact() {
     <>
       <Navbar cc={cc} />
       <main className="max-w-6xl mx-auto px-6 py-24 text-white">
-        {/* Contact title */}
         <h1 className="text-6xl md:text-7xl font-serif font-bold text-left mb-16 tracking-tight">
           Contact
         </h1>
 
-        {/* Let’s Connect และข้อความกลาง */}
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-3 text-yellow-400">
             Let’s Connect
@@ -26,9 +24,7 @@ export default function Contact() {
             excited to meet new people and work on interesting projects.
           </p>
 
-          {/* ส่วนของไอคอน 3 อัน */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-20">
-            {/* Email */}
             <div className="flex flex-col items-center hover:scale-110 transition-transform duration-300">
               <img
                 src={profileIcon}
@@ -40,7 +36,6 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Location */}
             <div className="flex flex-col items-center hover:scale-110 transition-transform duration-300">
               <img
                 src={c2Image}
@@ -52,7 +47,6 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* LinkedIn */}
             <div className="flex flex-col items-center hover:scale-110 transition-transform duration-300">
               <img
                 src={c3Image}

@@ -1,27 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar.jsx';
-import blobImage from '../assets/react.svg';
+import loaderImg from '../ReactTailwindWS01/loader_01.png';
 
 function ImageOrFallback() {
-  const [err, setErr] = useState(false);
-  const imgSrc = blobImage;
-  if (!err) {
-    return (
-      <img src={imgSrc} alt="decorative blob" className="absolute inset-0 w-full h-full object-contain blob-img" onError={() => setErr(true)} />
-    );
-  }
-  // fallback: three colored blobs
   return (
-    <>
-      <div className="absolute inset-0 blob blob-1" aria-hidden></div>
-      <div className="absolute inset-0 blob blob-2" aria-hidden></div>
-      <div className="absolute inset-0 blob blob-3" aria-hidden></div>
-    </>
+      <div className="flex items-center justify-center w-full h-full">
+        <div className="about-loader-wrapper w-full h-full flex items-center justify-center">
+          <img src={loaderImg} alt="decorative" className="w-full h-full object-contain about-loader-img" />
+        </div>
+      </div>
   );
 }
 
 async function handleDownload() {
-  // try download CV from public/CV.pdf
+  
   const cvUrl = '/CV.pdf';
   try {
     const res = await fetch(cvUrl);
@@ -38,10 +30,11 @@ async function handleDownload() {
       return;
     }
   } catch (e) {
-    // ignore and fallback
   }
-  // fallback to blob image
-  const fallback = blobImage;
+  
+  
+  
+  const fallback = loaderImg;
   try {
     const res2 = await fetch(fallback);
     if (res2.ok) {
@@ -75,14 +68,12 @@ export default function About() {
             </div>
           </div>
 
-          
+
           <div className="text-gray-200">
             <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">Hi, I'm Bank SAU. A passionate Front-end Web Developer based in Thailand.</h3>
-            <p className="text-gray-400 leading-relaxed mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, nulla? Facilis asperiores nihil quos sed sequi nobis distinctio ipsam perferendis ut minima consequuntur blanditiis odio deleniti et voluptates facere, quia expedita beatae minus labore iusto? Quasi, adipisci voluptatibus culpa vero omnis cumque similique repellendus eum! Sit recusandae pariatur placeat impedit maiores eos maxime similique vitae! Ab doloremque unde, cum inventore eveniet esse accusantium libero fugiat est tempore deleniti dignissimos a!</p>
-
+            <p className="text-gray-400 leading-relaxed mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, nulla? Facilis asperiores nihil quos sed sequi nobis distinctio ipsam perferendis ut minima consequuntur blanditiis odio deleniti et voluptates facere, quia expedita beatae minus labore iusto? Quasi, adipisci voluptatibus culpa vero omnis cumque similique repellendus eum! Sit recusandae pariatur placeat impedit maiores eos maxime similique vitae! Ab doloremque unde, cum inventore eveniet esse accusantium libero fugiat est tempore deleniti dignissimos a!</p>            
             <div className="flex items-center mt-6">
-              <button onClick={handleDownload} className="inline-block bg-transparent border border-white text-white py-3 px-6 rounded-full hover:bg-white/5 transition">Download CV</button>
-            </div>
+              <button onClick={handleDownload} className="inline-block bg-transparent border border-white text-white py-3 px-6 rounded-full hover:bg-white/5 transition">Download CV</button>                       </div>
           </div>
         </section>
       </main>
