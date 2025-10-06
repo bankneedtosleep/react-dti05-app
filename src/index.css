@@ -6,3 +6,101 @@
 body{
   background-color: black;
 }
+
+.blob {
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  filter: blur(14px);
+  opacity: 0.9;
+  transform: translate3d(0,0,0);
+}
+.blob-1 {
+  background: #6b5cff;
+  width: 56%;
+  height: 56%;
+  left: 6%;
+  top: 12%;
+  animation: float1 6s ease-in-out infinite;
+}
+.blob-2 {
+  background: #ff5c6e;
+  width: 68%;
+  height: 68%;
+  left: 18%;
+  top: 28%;
+  animation: float2 7s ease-in-out infinite;
+}
+.blob-3 {
+  background: #4eff5a;
+  width: 60%;
+  height: 60%;
+  left: 30%;
+  top: 6%;
+  animation: float3 8s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-10px) translateX(6px) scale(1.05); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
+}
+@keyframes float2 {
+  0% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-14px) translateX(-4px) scale(1.03); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
+}
+@keyframes float3 {
+  0% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-8px) translateX(10px) scale(1.06); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
+}
+
+.blob-img { animation: spin 10s linear infinite; opacity: 0.95; }
+@keyframes spin { 0% { transform: rotate(0deg) } 100% { transform: rotate(360deg) } }
+
+/* Portfolio card styles */
+.card {
+  border-radius: 1rem; /* rounded-2xl */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  background: rgba(255,255,255,0.02);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  will-change: transform;
+  opacity: 0;
+  transform: translateY(8px) scale(0.995);
+  animation: fadeUp 480ms ease forwards;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* in-view helper */
+.portfolio-section .card {
+  opacity: 0;
+  transform: translateY(18px) scale(0.995);
+  animation: fadeUp 520ms ease forwards;
+}
+.portfolio-section.in-view .card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* subtle tilt on hover for images */
+.card-img { transition: transform 400ms cubic-bezier(.2,.8,.2,1); }
+.card:hover .card-img { transform: scale(1.02) rotate(-0.5deg); }
+
+/* button transition */
+button { transition: transform 180ms ease, box-shadow 180ms ease; }
+button:hover { transform: translateY(-3px); }
+
