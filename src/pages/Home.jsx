@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import profile from "../assets/profile.jpg";
+import linkedinIcon from "../assets/_Linkedin.png";
 import { FaInstagramSquare } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
 import img1 from "../assets/img1.png";
@@ -32,7 +33,7 @@ export default function Home() {
             Web developer based in Thailand
           </p>
           <div className="flex items-center justify-center lg:justify-start gap-4 mt-6">
-            <img src="/src/assets/_Linkedin.png" alt="linkedin" className="w-10 h-10 bg-white rounded-full p-1" />
+            <img src={linkedinIcon} alt="linkedin" className="w-10 h-10 bg-white rounded-full p-1" />
             <GrGithub className="text-3xl lg:text-4xl" />
           </div>
         </div>

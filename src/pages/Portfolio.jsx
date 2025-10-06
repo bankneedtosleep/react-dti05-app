@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar.jsx';
+import bikesBeardsImg from '../ReactTailwindWS01/Bikes and beards 1.png';
+import learnifyImg from '../ReactTailwindWS01/Learnify 1.png';
+import figmaCommunityImg from '../ReactTailwindWS01/Figma to HTML (Community) 1.png';
+import edtechImg from '../ReactTailwindWS01/EdTech 1.png';
 
 export default function Portfolio() {
   const pc = { color: 'yellow' };
@@ -8,28 +12,28 @@ export default function Portfolio() {
      {
       id: 1,
       title: 'Bikes and Beards',
-      img: '/src/ReactTailwindWS01/Bikes and beards 1.png',
+      img: bikesBeardsImg,
       desc:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae justo vitae orci posuere fermentum. Integer convallis, nisl at aliquet cursus, urna sapien bibendum erat, at cursus dui sapien a felis.',
     },
     {
       id: 2,
       title: 'Learnify',
-      img: '/src/ReactTailwindWS01/Learnify 1.png',
+      img: learnifyImg,
       desc:
         'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
     },
     {
       id: 3,
       title: 'Anime-X',
-      img: '/src/ReactTailwindWS01/Figma to HTML (Community) 1.png',
+      img: figmaCommunityImg,
       desc:
         'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.',
     },
     {
       id: 4,
       title: 'Tech-Z',
-      img: '/src/ReactTailwindWS01/EdTech 1.png',
+      img: edtechImg,
       desc:
         'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.',
     },
@@ -97,6 +101,5 @@ function _attachObserver() {
 }
 
 if (typeof window !== 'undefined') {
-  // small delay to attach after initial render
   setTimeout(_attachObserver, 300);
 }

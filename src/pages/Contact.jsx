@@ -1,5 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
+import profileIcon from "../ReactTailwindWS01/Profile Icon.png";
+import c2Image from "../ReactTailwindWS01/C2-BPYOI9v0.png";
+import c3Image from "../ReactTailwindWS01/C3-w0fAnKNh.png";
 
 export default function Contact() {
   const cc = { color: "yellow" };
@@ -28,7 +31,7 @@ export default function Contact() {
             {/* Email */}
             <div className="flex flex-col items-center hover:scale-110 transition-transform duration-300">
               <img
-                src="/src/ReactTailwindWS01/Profile Icon.png"
+                src={profileIcon}
                 alt="email"
                 className="w-20 h-20 mb-4"
               />
@@ -40,7 +43,7 @@ export default function Contact() {
             {/* Location */}
             <div className="flex flex-col items-center hover:scale-110 transition-transform duration-300">
               <img
-                src="/src/ReactTailwindWS01/C2-BPYOI9v0.png"
+                src={c2Image}
                 alt="location"
                 className="w-20 h-20 mb-4"
               />
@@ -52,7 +55,7 @@ export default function Contact() {
             {/* LinkedIn */}
             <div className="flex flex-col items-center hover:scale-110 transition-transform duration-300">
               <img
-                src="/src/ReactTailwindWS01/C3-w0fAnKNh.png"
+                src={c3Image}
                 alt="linkedin"
                 className="w-20 h-20 mb-4"
               />

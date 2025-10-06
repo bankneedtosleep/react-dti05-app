@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar.jsx';
+import blobImage from '../assets/react.svg';
 
 function ImageOrFallback() {
   const [err, setErr] = useState(false);
-  const imgSrc = '/src/assets/blob.png';
+  const imgSrc = blobImage;
   if (!err) {
     return (
       <img src={imgSrc} alt="decorative blob" className="absolute inset-0 w-full h-full object-contain blob-img" onError={() => setErr(true)} />
@@ -40,7 +41,7 @@ async function handleDownload() {
     // ignore and fallback
   }
   // fallback to blob image
-  const fallback = '/src/assets/blob.png';
+  const fallback = blobImage;
   try {
     const res2 = await fetch(fallback);
     if (res2.ok) {
@@ -48,7 +49,7 @@ async function handleDownload() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'blob.png';
+  a.download = 'blob.svg';
       document.body.appendChild(a);
       a.click();
       a.remove();
